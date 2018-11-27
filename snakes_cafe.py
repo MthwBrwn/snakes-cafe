@@ -39,6 +39,8 @@ def welcome (question):
         {'**' + ' ' * ((WIDTH - 2 -len(question))//2) + question + ' ' * ((WIDTH - 4 -len(question))//2) + '**'
         }
     '''))
+
+
 def user_query ():
     print (' ')
     line()
@@ -48,17 +50,21 @@ def user_query ():
 
 
 def counter (x):
+
+    if str(x).lower() == 'quit' :
+            exit()
     for i in food_menu:
         check =''
         check = (i['food item'])
-        if 'x'.lower() == check.lower():
+        if str(x).lower() == check.lower():
             i['num_selected'] += i['num_selected']+1
             print (i['num_selected'])
-
     print('that doesnt seem to be an item.')
+
 
 def exit ():
     print ('Thank you for looking at our menu!')
+
 
 """ this sets up the menu items and gives some flexibility to the menu items X is the food type and i and j are the range for printing the food items"""
 def print_items (food_type,i,j):
@@ -68,6 +74,7 @@ def print_items (food_type,i,j):
     for k in range (i,j):
         print (food_menu[k]['food item'])
 
+
 def questionBlock ():
     line()
     welcome('Welcome to the Snakes Cafe!')
@@ -75,6 +82,7 @@ def questionBlock ():
     empty()
     welcome('To quit at any time, type "quit"')
     line()
+
 
 def menu_format():
     print_items('Appetizers',0,3)
@@ -84,11 +92,14 @@ def menu_format():
 
 
 def run ():
-
         questionBlock ()
         menu_format ()
         user_input = user_query()
+        print(user_input)
         counter(user_input)
+
+
+
 
 if __name__ =='__main__':
     run()
