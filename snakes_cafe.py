@@ -6,34 +6,36 @@ WIDTH = 60
 # collection of questions for the user
 # looking to set up a list
 food_menu = [
-    { 'food item' : 'Wings', 'num_selected': 0 },
-    { 'food item' : 'Cookies', 'num_selected': 0 },
-    { 'food item' : 'Spring Rolls', 'num_selected': 0 },
-    { 'food item' : 'Salmon', 'num_selected': 0 },
-    { 'food item' : 'Steak', 'num_selected': 0 },
-    { 'food item' : 'Meat Tornado', 'num_selected': 0 },
-    { 'food item' : 'A Literal Garden', 'num_selected': 0 },
-    { 'food item' : 'Ice cream', 'num_selected': 0 },
-    { 'food item' : 'Cake', 'num_selected': 0 },
-    { 'food item' : 'Pie', 'num_selected': 0 },
-    { 'food item' : 'Coffee', 'num_selected': 0 },
-    { 'food item' : 'Tea', 'num_selected': 0 },
-    { 'food item' : 'Blood of the Innocent', 'num_selected': 0 }
+    {'food item': 'Wings', 'num_selected': 0},
+    {'food item': 'Cookies', 'num_selected': 0},
+    {'food item': 'Spring Rolls', 'num_selected': 0},
+    {'food item': 'Salmon', 'num_selected': 0},
+    {'food item': 'Steak', 'num_selected': 0},
+    {'food item': 'Meat Tornado', 'num_selected': 0},
+    {'food item': 'A Literal Garden', 'num_selected': 0},
+    {'food item': 'Ice cream', 'num_selected': 0},
+    {'food item': 'Cake', 'num_selected': 0},
+    {'food item': 'Pie', 'num_selected': 0},
+    {'food item': 'Coffee', 'num_selected': 0},
+    {'food item': 'Tea', 'num_selected': 0},
+    {'food item': 'Blood of the Innocent', 'num_selected': 0}
 ]
 
-""" short functions for building questions()"""
 def line():
+    """ """
     print (dedent(f'''{'*' * WIDTH} '''))
 
+
 def empty ():
+    """ """
      print (dedent(f'''{'**'}  '''))
 
 def short_break():
+    """ """
     print (dedent(f'''{'-'* 8}'''))
 
 def welcome (question):
     """ print an intro message and the menu for the restaurant
-    pass
     """
     print (dedent(f'''
         {'**' + ' ' * ((WIDTH - 2 -len(question))//2) + question + ' ' * ((WIDTH - 4 -len(question))//2) + '**'
@@ -41,7 +43,8 @@ def welcome (question):
     '''))
 
 
-def user_query ():
+def user_query():
+    """ """
     print (' ')
     line()
     welcome('What would you like to order?')
@@ -49,12 +52,12 @@ def user_query ():
     input('??')
 
 
-def counter (x):
+def counter(x):
 
-    if str(x).lower() == 'quit' :
+    if str(x).lower() == 'quit':
             exit()
     for i in food_menu:
-        check =''
+        check = ''
         check = (i['food item'])
         if str(x).lower() == check.lower():
             i['num_selected'] += i['num_selected']+1
@@ -66,8 +69,10 @@ def exit ():
     print ('Thank you for looking at our menu!')
 
 
-""" this sets up the menu items and gives some flexibility to the menu items X is the food type and i and j are the range for printing the food items"""
 def print_items (food_type,i,j):
+    """ this sets up the menu items and gives some
+    flexibility to the menu items X is the food type and i and j
+    are the range for printing the food items"""
     print(' ')
     print(food_type)
     short_break()
@@ -85,21 +90,20 @@ def questionBlock ():
 
 
 def menu_format():
-    print_items('Appetizers',0,3)
-    print_items('Entrees',3,7)
-    print_items('Desserts',7,10)
-    print_items('Drinks',10,13)
+    print_items('Appetizers', 0, 3)
+    print_items('Entrees', 3, 7)
+    print_items('Desserts', 7, 10)
+    print_items('Drinks', 10, 13)
 
 
-def run ():
-        questionBlock ()
-        menu_format ()
-        user_input = user_query()
-        print(user_input)
-        counter(user_input)
+def run():
+    """ """
+    questionBlock()
+    menu_format()
+    user_input = user_query()
+    print(user_input)
+    counter(user_input)
 
 
-
-
-if __name__ =='__main__':
+if __name__ == '__main__' :
     run()
