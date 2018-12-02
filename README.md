@@ -21,3 +21,4 @@ This application is written in Python 3.6
 ## Change Log
 
 13:07 1 DEC - file pulled down for corrections.
+13:51 1 DEC - changing data structure after code review
