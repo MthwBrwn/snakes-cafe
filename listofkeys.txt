@@ -1,0 +1,15 @@
+food_menu = [
+    {'food item': 'Wings', 'num_selected': 0},
+    {'food item': 'Cookies', 'num_selected': 0},
+    {'food item': 'Spring Rolls', 'num_selected': 0},
+    {'food item': 'Salmon', 'num_selected': 0},
+    {'food item': 'Steak', 'num_selected': 0},
+    {'food item': 'Meat Tornado', 'num_selected': 0},
+    {'food item': 'A Literal Garden', 'num_selected': 0},
+    {'food item': 'Ice cream', 'num_selected': 0},
+    {'food item': 'Cake', 'num_selected': 0},
+    {'food item': 'Pie', 'num_selected': 0},
+    {'food item': 'Coffee', 'num_selected': 0},
+    {'food item': 'Tea', 'num_selected': 0},
+    {'food item': 'Blood of the Innocent', 'num_selected': 0}
+]
